@@ -17,9 +17,10 @@ import Login from "./components/Login/Login";
 import { auth } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { fetchData } from "../firebase";
+import AddProject from "./components/AddProject/AddProject";
 
 // Define the Project type
-interface Project {
+export interface Project {
   id: string;
   title: string;
   description: string;
@@ -31,6 +32,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState<Project[]>([]);
+  const [isAddProjectOpen, setIsAddProjectOpen] = useState(false);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -66,6 +68,9 @@ function App() {
   return (
     <>
       <BackgroundAnimation />
+      {isAddProjectOpen && (
+        <AddProject setIsAddProjectOpen={setIsAddProjectOpen} />
+      )}
       {isPopupOpen && (
         <Login setIsPopupOpen={setIsPopupOpen} setIsLoggedIn={setIsLoggedIn} />
       )}
@@ -77,6 +82,8 @@ function App() {
               setIsPopupOpen={setIsPopupOpen}
               isLoggedIn={isLoggedIn}
               setIsLoggedIn={setIsLoggedIn}
+              projects={projects}
+              setIsAddProjectOpen={setIsAddProjectOpen}
             />
           }
         />
@@ -100,6 +107,7 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 setIsLoggedIn={setIsLoggedIn}
                 project={project}
+                setIsAddProjectOpen={setIsAddProjectOpen}
               />
             }
           />

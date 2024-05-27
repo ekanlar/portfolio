@@ -7,6 +7,9 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 // CSS File imports
 import "./Login.css";
 
+// Import Close Icon
+import closeIcon from "../../assets/logos//close-icon.png";
+
 interface LoginProps {
   setIsPopupOpen: React.Dispatch<React.SetStateAction<boolean>>;
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
@@ -71,7 +74,7 @@ function Login({ setIsPopupOpen, setIsLoggedIn }: LoginProps) {
         </button>
         <img
           className="login-close"
-          src="src\assets\logos\close-icon.png"
+          src={closeIcon}
           alt="Click to Close"
           onClick={() => setIsPopupOpen(false)}
           draggable="false"

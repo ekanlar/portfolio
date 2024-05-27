@@ -1,3 +1,9 @@
+.projectcard-link {
+  text-decoration: none; /* Remove underline from link */
+  color: inherit; /* Inherit text color */
+  z-index: 0;
+}
+
 .projectcard-container {
   display: flex;
   /* box-sizing: border-box; */

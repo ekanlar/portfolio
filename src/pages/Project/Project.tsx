@@ -1,7 +1,6 @@
 import { useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import "./Project.css";
-import { fetchData } from "../../../firebase";
 
 interface ProjectProps {
   setIsPopupOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -13,6 +12,7 @@ interface ProjectProps {
     description: string;
     imageLink: string[];
   };
+  setIsAddProjectOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 function Project({
@@ -20,6 +20,7 @@ function Project({
   isLoggedIn,
   setIsLoggedIn,
   project,
+  setIsAddProjectOpen,
 }: ProjectProps) {
   const [largeImageSrc, setLargeImageSrc] = useState<string>(
     project.imageLink[0]
@@ -35,6 +36,7 @@ function Project({
         setIsPopupOpen={setIsPopupOpen}
         isLoggedIn={isLoggedIn}
         setIsLoggedIn={setIsLoggedIn}
+        setIsAddProjectOpen={setIsAddProjectOpen}
       />
       <div className="project-container">
         <div className="project-main-section">
@@ -48,17 +50,6 @@ function Project({
           </a>
           <img className="project-image" src={largeImageSrc} alt="" />
           <div className="project-image-thumbnail-container">
-            {/* <img
-              className="project-image-thumbnail"
-              src="src/assets/images/imagesProject1/project1_img_1.webp"
-              alt=""
-              onClick={() =>
-                handleImageClick(
-                  "src/assets/images/imagesProject1/project1_img_1.webp"
-                )
-              }
-            /> */}
-
             {project.imageLink.map((image, index) => (
               <img
                 key={index}

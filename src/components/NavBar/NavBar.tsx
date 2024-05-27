@@ -2,6 +2,7 @@ import { Component, useEffect, useState } from "react";
 import "./NavBar.css";
 import Login from "../Login/Login";
 import { auth } from "../../../firebase";
+import AddProject from "../AddProject/AddProject";
 
 // class NavBar extends Component {
 
@@ -25,9 +26,15 @@ interface NavBarProps {
   setIsPopupOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isLoggedIn: boolean;
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsAddProjectOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function NavBar({ setIsPopupOpen, isLoggedIn, setIsLoggedIn }: NavBarProps) {
+function NavBar({
+  setIsPopupOpen,
+  isLoggedIn,
+  setIsLoggedIn,
+  setIsAddProjectOpen,
+}: NavBarProps) {
   // const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const handleLogout = async () => {
@@ -42,6 +49,16 @@ function NavBar({ setIsPopupOpen, isLoggedIn, setIsLoggedIn }: NavBarProps) {
 
   return (
     <div className="navbar-container">
+      {isLoggedIn && (
+        <button
+          className="navbar-addproject"
+          onClick={() => {
+            setIsAddProjectOpen(true);
+          }}
+        >
+          Add Project
+        </button>
+      )}
       <ul className="navbar-list">
         <li>Home</li>
         <li>Projects</li>
