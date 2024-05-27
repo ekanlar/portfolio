@@ -1,0 +1,57 @@
+.navbar-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  /* background-color: aqua; */
+  background: radial-gradient(ellipse, #c9e4ca, #55828b);
+  background-blend-mode: overlay;
+  border: thick double white;
+  border-radius: 20px;
+  animation: backgroundChange 8s ease-in-out infinite;
+  z-index: 1;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+  /* background-color: bisque; */
+  list-style: none;
+}
+
+.navbar-list > li {
+  font-size: 30px;
+}
+
+.navbar-login-button {
+  margin-left: auto;
+  margin-right: 10px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(27, 216, 134, 0.2);
+}
+
+.navbar-login-button:hover {
+  background-color: rgba(53, 252, 146, 0.5);
+}
+
+.navbar-login-button:hover:active {
+  filter: brightness(0.5) contrast(1.2);
+}
+
+@keyframes backgroundChange {
+  0%,
+  50%,
+  100% {
+    background-color: #89bba5;
+  }
+  25%,
+  75% {
+    background-color: #bbe6ce;
+  }
+}
