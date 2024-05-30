@@ -81,6 +81,7 @@ function NavBar({
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-linkedin-link"
+          draggable="false"
         >
           <button className="navbar-link-button">
             <img
@@ -97,6 +98,7 @@ function NavBar({
           target="_blank"
           rel="noopener noreferrer"
           className="navbar-linkedin-link"
+          draggable="false"
         >
           <button className="navbar-link-button">
             <img

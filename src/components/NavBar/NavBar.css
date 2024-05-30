@@ -56,9 +56,12 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  border: 1px solid white;
+  /* border: 1px solid white;
   border-radius: 10px;
-  background-color: rgba(27, 216, 134, 0.2);
+  background-color: rgba(27, 216, 134, 0.2); */
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
 }
 
 .navbar-link-icon {
