@@ -35,6 +35,11 @@
   font-size: 2.8vw;
 }
 
+.projectcard-loading-icon {
+  height: 50%;
+  margin-top: 0.3vw;
+}
+
 .projectcard-image {
   height: 50%;
   margin-top: 0.3vw;

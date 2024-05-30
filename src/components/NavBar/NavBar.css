@@ -3,6 +3,8 @@
   top: 0;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 76px;
   width: 100%;
   box-sizing: border-box;
   /* background-color: aqua; */
@@ -17,13 +19,15 @@
 .navbar-addproject {
   color: red;
   font-weight: bold;
-  padding: 0px;
   margin-left: 10px;
-  margin-right: auto;
   height: 40px;
   border: 1px solid white;
   border-radius: 10px;
   background-color: rgba(27, 216, 134, 0.2);
+  white-space: normal; /* Allow text to wrap */
+  text-align: center; /* Center-align the text */
+  width: 67px; /* Fixed width to ensure wrapping */
+  padding: 5px; /* Adjust padding for better spacing */
 }
 
 .navbar-addproject:hover {
@@ -34,18 +38,44 @@
   filter: brightness(0.5) contrast(1.2);
 }
 
-.navbar-list {
+/*////////// Links Styles ///////////*/
+
+.navbar-links-container {
   display: flex;
   gap: 20px;
-  width: 100%;
-  justify-content: center;
-  /* background-color: bisque; */
-  list-style: none;
+  position: absolute;
+  margin-left: -180px;
+  left: 50%;
 }
 
-.navbar-list > li {
-  font-size: 30px;
+.navbar-links-container > * {
+  text-decoration: none;
 }
+
+.navbar-link-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(27, 216, 134, 0.2);
+}
+
+.navbar-link-icon {
+  height: 50px;
+}
+
+.navbar-link-button:hover {
+  background-color: rgba(53, 252, 146, 0.5);
+}
+
+.navbar-link-button:active {
+  filter: brightness(0.5) contrast(1.2);
+}
+
+/* ///////////////////////////////////////// */
+
+/*////////// Login Button Styles ///////////*/
 
 .navbar-login-button {
   margin-left: auto;
@@ -63,6 +93,8 @@
 .navbar-login-button:hover:active {
   filter: brightness(0.5) contrast(1.2);
 }
+
+/* ///////////////////////////////////////// */
 
 @keyframes backgroundChange {
   0%,

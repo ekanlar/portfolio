@@ -3,6 +3,11 @@ import "./NavBar.css";
 import Login from "../Login/Login";
 import { auth } from "../../../firebase";
 import AddProject from "../AddProject/AddProject";
+import { Link } from "react-router-dom";
+import homeIcon from "../../assets/logos/homeIcon.png";
+import linkedInLogo from "../../assets/logos/linkedInLogo.png";
+import githubIcon from "../../assets/logos/githubIcon.png";
+import githubIcon_wbg from "../../assets/logos/githubIcon_wbg.png";
 
 // class NavBar extends Component {
 
@@ -59,12 +64,51 @@ function NavBar({
           Add Project
         </button>
       )}
-      <ul className="navbar-list">
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Blog</li>
-        {isLoggedIn && <li>Manage</li>}
-      </ul>
+      <div className="navbar-links-container">
+        <Link to="/" className="navbar-home-link" draggable="false">
+          <button className="navbar-link-button">
+            <img
+              src={homeIcon}
+              alt="Home Icon"
+              className="navbar-link-icon"
+              draggable="false"
+            />
+            <span className="navbar-link-text">Home</span>
+          </button>
+        </Link>
+        <a
+          href="http://www.linkedin.com/in/emirhan-kanlar"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="navbar-linkedin-link"
+        >
+          <button className="navbar-link-button">
+            <img
+              src={linkedInLogo}
+              alt="LinkedIn Icon"
+              className="navbar-link-icon"
+              draggable="false"
+            />
+            <span className="navbar-link-text">LinkedIn</span>
+          </button>
+        </a>
+        <a
+          href="https://github.com/ekanlar"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="navbar-linkedin-link"
+        >
+          <button className="navbar-link-button">
+            <img
+              src={githubIcon_wbg}
+              alt="LinkedIn Icon"
+              className="navbar-link-icon"
+              draggable="false"
+            />
+            <span className="navbar-link-text">GitHub</span>
+          </button>
+        </a>
+      </div>
       <button
         className="navbar-login-button"
         // onClick={isLoggedIn ? () => logout() : () => setIsPopupOpen(true)}
