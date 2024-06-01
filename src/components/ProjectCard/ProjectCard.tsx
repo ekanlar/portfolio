@@ -2,7 +2,6 @@ import { Component } from "react";
 import "./ProjectCard.css";
 import { Link } from "react-router-dom";
 import loadingIcon from "../../assets/logos/loading.gif";
-import pendulum from "../../assets/logos/pendulum.gif";
 
 interface ProjectCardProps {
   project: {
