@@ -18,6 +18,7 @@ import { auth } from "../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { fetchData } from "../firebase";
 import AddProject from "./components/AddProject/AddProject";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 // Define the Project type
 export interface Project {
@@ -68,6 +69,7 @@ function App() {
   return (
     <>
       <BackgroundAnimation />
+      <AboutMe />
       {isAddProjectOpen && (
         <AddProject setIsAddProjectOpen={setIsAddProjectOpen} />
       )}
