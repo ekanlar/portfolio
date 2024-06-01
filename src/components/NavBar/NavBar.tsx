@@ -1,12 +1,8 @@
-import { Component, useEffect, useState } from "react";
 import "./NavBar.css";
-import Login from "../Login/Login";
 import { auth } from "../../../firebase";
-import AddProject from "../AddProject/AddProject";
 import { Link } from "react-router-dom";
 import homeIcon from "../../assets/logos/homeIcon.png";
 import linkedInLogo from "../../assets/logos/linkedInLogo.png";
-import githubIcon from "../../assets/logos/githubIcon.png";
 import githubIcon_wbg from "../../assets/logos/githubIcon_wbg.png";
 
 // class NavBar extends Component {
@@ -37,7 +33,7 @@ interface NavBarProps {
 function NavBar({
   setIsPopupOpen,
   isLoggedIn,
-  setIsLoggedIn,
+  // setIsLoggedIn,
   setIsAddProjectOpen,
 }: NavBarProps) {
   // const [isLoggedIn, setIsLoggedIn] = useState(true);

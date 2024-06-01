@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 // FireBase Imports
 import { auth } from "../../../firebase";
@@ -15,7 +15,7 @@ interface LoginProps {
   setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-function Login({ setIsPopupOpen, setIsLoggedIn }: LoginProps) {
+function Login({ setIsPopupOpen }: LoginProps) {
   const [isCredentialsTrue, setIsCredentialsTrue] = useState(true);
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);

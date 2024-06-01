@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import "./BackgroundAnimation.css";
 
 const codes = [
