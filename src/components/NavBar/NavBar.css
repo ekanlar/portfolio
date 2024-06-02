@@ -97,7 +97,9 @@
 
 @media (max-width: 768px) {
   .hamburger-menu {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     margin: 0px;
     margin-right: 10px;
