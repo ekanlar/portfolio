@@ -25,6 +25,7 @@ const TextContainer = styled.div`
     1px 1px 0 #000; // Simulates a border by creating a shadow on all sides
   font-family: "Lobster", sans-serif;
   letter-spacing: 0px;
+  font-weight: 600;
 
   @media (max-width: 768px) {
     // Media query for smaller screens
