@@ -118,6 +118,7 @@
     border: thick double white;
     border-radius: 20px;
     animation: backgroundChange 8s ease-in-out infinite;
+    z-index: 2;
   }
 
   .navbar-addproject {

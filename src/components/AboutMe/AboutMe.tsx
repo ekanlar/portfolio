@@ -7,7 +7,7 @@ const Container = styled.div`
   position: fixed;
   top: 10px;
   left: 10px;
-  z-index: 1000;
+  z-index: 5;
 
   @media (max-width: 768px) {
     top: 10px;
