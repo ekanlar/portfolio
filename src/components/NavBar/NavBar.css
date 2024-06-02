@@ -92,6 +92,10 @@
 }
 
 @media (max-width: 768px) {
+  .navbar-container {
+    position: static;
+  }
+
   .hamburger-menu {
     display: block;
     margin-right: 10px;
