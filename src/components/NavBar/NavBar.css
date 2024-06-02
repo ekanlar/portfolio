@@ -37,6 +37,9 @@
   border: none;
   color: white;
   cursor: pointer;
+  width: 30px;
+  margin: 0px;
+  margin-right: 10px;
 }
 
 .navbar-addproject {
@@ -96,10 +99,6 @@
 }
 
 @media (max-width: 768px) {
-  .navbar-container {
-    justify-content: flex-end;
-  }
-
   .hamburger-menu {
     display: block;
     margin: 0;
