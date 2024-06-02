@@ -146,8 +146,10 @@
   font-size: 15px;
   text-align: center; /* Ensure text is centered */
   padding: 0; /* Remove any default padding */
-  margin-top: auto;
-  margin-bottom: auto;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+  margin-left: auto;
+  margin-right: 10px;
   cursor: pointer; /* Add a pointer cursor for better UX */
 }
 
