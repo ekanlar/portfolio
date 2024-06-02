@@ -40,6 +40,9 @@
 }
 
 .navbar-addproject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: red;
   font-weight: bold;
   margin-left: 10px;
@@ -124,10 +127,6 @@
     border-radius: 20px;
     animation: backgroundChange 8s ease-in-out infinite;
     z-index: 2;
-  }
-
-  .navbar-addproject {
-    display: none;
   }
 }
 
