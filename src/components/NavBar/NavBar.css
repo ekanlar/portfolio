@@ -1,3 +1,14 @@
+/* Normalize.css import */
+@import "normalize.css";
+
+/* Ensure consistent box-sizing across all elements */
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+/* Navbar container styles */
 .navbar-container {
   position: sticky;
   top: 0;
@@ -21,10 +32,11 @@
   .navbar-container {
     width: calc(100% - 115px);
     margin-left: 115px;
+    position: static;
   }
 }
 
-/* Add styles for hamburger menu */
+/* Hamburger menu styles */
 .hamburger-menu {
   display: none;
   font-size: 24px;
@@ -42,10 +54,10 @@
   border: 1px solid white;
   border-radius: 10px;
   background-color: rgba(27, 216, 134, 0.2);
-  white-space: normal; /* Allow text to wrap */
-  text-align: center; /* Center-align the text */
-  width: 67px; /* Fixed width to ensure wrapping */
-  padding: 5px; /* Adjust padding for better spacing */
+  white-space: normal;
+  text-align: center;
+  width: 67px;
+  padding: 5px;
 }
 
 .navbar-addproject:hover {
@@ -56,8 +68,7 @@
   filter: brightness(0.5) contrast(1.2);
 }
 
-/*////////// Links Styles ///////////*/
-
+/* Links container styles */
 .navbar-links-container {
   display: flex;
   gap: 20px;
@@ -92,10 +103,6 @@
 }
 
 @media (max-width: 768px) {
-  .navbar-container {
-    position: static;
-  }
-
   .hamburger-menu {
     display: block;
     margin-right: 10px;
@@ -130,10 +137,7 @@
   }
 }
 
-/* ///////////////////////////////////////// */
-
-/*////////// Login Button Styles ///////////*/
-
+/* Login button styles */
 .navbar-login-button {
   margin-left: auto;
   margin-right: 10px;
@@ -151,8 +155,7 @@
   filter: brightness(0.5) contrast(1.2);
 }
 
-/* ///////////////////////////////////////// */
-
+/* Background change animation */
 @keyframes backgroundChange {
   0%,
   50%,
