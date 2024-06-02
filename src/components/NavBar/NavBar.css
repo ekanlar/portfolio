@@ -7,7 +7,6 @@
   height: 76px;
   width: calc(100% - 170px);
   box-sizing: border-box;
-  /* background-color: aqua; */
   background: radial-gradient(ellipse, #c9e4ca, #55828b);
   background-blend-mode: overlay;
   border: thick double white;
@@ -23,6 +22,16 @@
     width: calc(100% - 115px);
     margin-left: 115px;
   }
+}
+
+/* Add styles for hamburger menu */
+.hamburger-menu {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .navbar-addproject {
@@ -65,9 +74,6 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  /* border: 1px solid white;
-  border-radius: 10px;
-  background-color: rgba(27, 216, 134, 0.2); */
   background-color: transparent;
   border: none;
   border-radius: 10px;
@@ -83,6 +89,40 @@
 
 .navbar-link-button:active {
   filter: brightness(0.5) contrast(1.2);
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .navbar-links-container {
+    display: none;
+  }
+
+  .navbar-links-container.open {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    top: 76px;
+    right: 1px;
+    padding: 10px;
+    margin-left: auto;
+    background: radial-gradient(ellipse, #c9e4ca, #55828b);
+    background-blend-mode: overlay;
+    border: thick double white;
+    border-radius: 20px;
+    animation: backgroundChange 8s ease-in-out infinite;
+  }
+
+  .navbar-addproject {
+    display: none;
+  }
+
+  .navbar-login-button {
+    margin-right: 10px;
+  }
 }
 
 /* ///////////////////////////////////////// */

@@ -1,27 +1,10 @@
+import React, { useState } from "react";
 import "./NavBar.css";
 import { auth } from "../../../firebase";
 import { Link } from "react-router-dom";
 import homeIcon from "../../assets/logos/homeIcon.png";
 import linkedInLogo from "../../assets/logos/linkedInLogo.png";
 import githubIcon_wbg from "../../assets/logos/githubIcon_wbg.png";
-
-// class NavBar extends Component {
-
-//   const [isPopupOpen, setIsPopupOpen] = useState(false)
-
-//   render() {
-//     return (
-//       <div className="navbar-container">
-//         <ul className="navbar-list">
-//           <li>Home</li>
-//           <li>Projects</li>
-//           <li>Blog</li>
-//         </ul>
-//         <button className="navbar-login-button">Login</button>
-//       </div>
-//     );
-//   }
-// }
 
 interface NavBarProps {
   setIsPopupOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -33,15 +16,13 @@ interface NavBarProps {
 function NavBar({
   setIsPopupOpen,
   isLoggedIn,
-  // setIsLoggedIn,
   setIsAddProjectOpen,
 }: NavBarProps) {
-  // const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogout = async () => {
     try {
       await auth.signOut();
-      // setIsLoggedIn(false);
       console.log("User logged out");
     } catch (error) {
       console.error("Logout error", error);
@@ -60,7 +41,7 @@ function NavBar({
           Add Project
         </button>
       )}
-      <div className="navbar-links-container">
+      <div className={`navbar-links-container ${isMenuOpen ? "open" : ""}`}>
         <Link to="/" className="navbar-home-link" draggable="false">
           <button className="navbar-link-button">
             <img
@@ -99,7 +80,7 @@ function NavBar({
           <button className="navbar-link-button">
             <img
               src={githubIcon_wbg}
-              alt="LinkedIn Icon"
+              alt="GitHub Icon"
               className="navbar-link-icon"
               draggable="false"
             />
@@ -109,11 +90,18 @@ function NavBar({
       </div>
       <button
         className="navbar-login-button"
-        // onClick={isLoggedIn ? () => logout() : () => setIsPopupOpen(true)}
-        onClick={isLoggedIn ? () => handleLogout() : () => setIsPopupOpen(true)}
+        onClick={isLoggedIn ? handleLogout : () => setIsPopupOpen(true)}
       >
-        {/* {isLoggedIn ? "Logout" : "Login"} */}
         {isLoggedIn ? "Logout" : "Login"}
+      </button>
+      <button
+        className="hamburger-menu"
+        onClick={() => {
+          setIsMenuOpen(!isMenuOpen);
+          console.log("Menu toggled:", !isMenuOpen);
+        }}
+      >
+        &#9776;
       </button>
     </div>
   );
