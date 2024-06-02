@@ -71,7 +71,7 @@
   margin-top: auto;
 }
 
-.login-button {
+/* .login-button {
   margin-top: auto;
   margin-bottom: auto;
   height: 40px;
@@ -80,6 +80,23 @@
   border-radius: 10px;
   background-color: #9fdac1;
   font-size: 15px;
+} */
+
+.login-button {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  height: 40px;
+  width: 55px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: #9fdac1;
+  font-size: 15px;
+  text-align: center; /* Ensure text is centered */
+  padding: 0; /* Remove any default padding */
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer; /* Add a pointer cursor for better UX */
 }
 
 .login-button:hover {
