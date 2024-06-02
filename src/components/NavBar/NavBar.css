@@ -139,6 +139,7 @@
   border: 1px solid white;
   border-radius: 10px;
   background-color: rgba(27, 216, 134, 0.2);
+  padding: 0;
 }
 
 .navbar-login-button:hover {
