@@ -5,12 +5,12 @@ import MyPic from "../../assets/images/MyPic.jpeg";
 // Styled components for the floating image and expanded div
 const Container = styled.div`
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 5px;
+  left: 5px;
   z-index: 5;
 
   @media (max-width: 768px) {
-    top: 10px;
+    // top: 10px;
   }
 `;
 
