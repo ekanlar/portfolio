@@ -116,6 +116,8 @@
 
   .navbar-link-button {
     flex-direction: column;
+    padding-top: 5px;
+    text-decoration: none;
   }
 }
 
