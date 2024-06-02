@@ -37,9 +37,6 @@
   border: none;
   color: white;
   cursor: pointer;
-  width: 30px;
-  margin: 0px;
-  margin-right: 10px;
 }
 
 .navbar-addproject {
@@ -101,7 +98,8 @@
 @media (max-width: 768px) {
   .hamburger-menu {
     display: block;
-    margin: 0;
+    width: 30px;
+    margin: 0px;
     margin-right: 10px;
   }
 

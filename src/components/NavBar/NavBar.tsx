@@ -98,7 +98,6 @@ function NavBar({
         className="hamburger-menu"
         onClick={() => {
           setIsMenuOpen(!isMenuOpen);
-          console.log("Menu toggled:", !isMenuOpen);
         }}
       >
         &#9776;
