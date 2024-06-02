@@ -1,13 +1,6 @@
 /* Normalize.css import */
 @import "normalize.css";
 
-/* Ensure consistent box-sizing across all elements */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 /* Navbar container styles */
 .navbar-container {
   position: sticky;
