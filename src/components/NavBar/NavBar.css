@@ -19,6 +19,7 @@
   z-index: 1;
   transition: margin-left 0.5s ease;
   margin-left: 170px;
+  gap: 0;
 }
 
 @media (max-width: 768px) {
