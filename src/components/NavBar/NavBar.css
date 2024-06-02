@@ -124,20 +124,31 @@
   .navbar-addproject {
     display: none;
   }
-
-  .navbar-login-button {
-    margin-right: 10px;
-  }
 }
 
 /* Login button styles */
 .navbar-login-button {
-  margin-left: auto;
+  /* margin-left: auto;
   margin-right: 10px;
   height: 40px;
   border: 1px solid white;
   border-radius: 10px;
+  background-color: rgba(27, 216, 134, 0.2); */
+
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  height: 40px;
+  width: 55px;
+  border: 1px solid white;
+  border-radius: 10px;
   background-color: rgba(27, 216, 134, 0.2);
+  font-size: 15px;
+  text-align: center; /* Ensure text is centered */
+  padding: 0; /* Remove any default padding */
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer; /* Add a pointer cursor for better UX */
 }
 
 .navbar-login-button:hover {
