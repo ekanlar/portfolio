@@ -75,7 +75,9 @@
 /* Links container styles */
 .navbar-links-container {
   display: flex;
-  /* gap: 20px; */
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
   /* position: absolute; */
   /* margin-left: -180px; */
   /* left: 50%; */
@@ -89,6 +91,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  padding: 0px;
   background-color: transparent;
   border: none;
   border-radius: 10px;
@@ -109,8 +112,8 @@
 
 @media (max-width: 530px) {
   .navbar-links-container {
-    width: 100%;
     justify-content: space-evenly;
+    gap: 5px;
   }
   .navbar-link-text {
     /* display: none; */
