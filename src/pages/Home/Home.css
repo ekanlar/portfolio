@@ -45,3 +45,25 @@
   border-bottom-left-radius: 20px;
   z-index: 0;
 }
+
+/* Login button styles */
+.home-login-button {
+  /* display: none; */
+  /* margin-left: auto;
+  margin-right: 10px; */
+  margin-left: calc(50vw - 29.225px);
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(27, 216, 134, 0.2);
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.home-login-button:hover {
+  background-color: rgba(53, 252, 146, 0.5);
+}
+
+.home-login-button:hover:active {
+  filter: brightness(0.5) contrast(1.2);
+}

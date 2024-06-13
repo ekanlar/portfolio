@@ -3,6 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import "./Home.css";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { Project } from "../../App"; // Import the Project type from App.tsx
+import { auth } from "../../../firebase";
 
 interface HomeProps {
   setIsPopupOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -11,6 +12,15 @@ interface HomeProps {
   projects: Project[];
   setIsAddProjectOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+const handleLogout = async () => {
+  try {
+    await auth.signOut();
+    console.log("User logged out");
+  } catch (error) {
+    console.error("Logout error", error);
+  }
+};
 
 class Home extends Component<HomeProps> {
   render() {
@@ -37,6 +47,12 @@ class Home extends Component<HomeProps> {
             ))}
           </div>
         </div>
+        <button
+          className="home-login-button"
+          onClick={isLoggedIn ? handleLogout : () => setIsPopupOpen(true)}
+        >
+          {isLoggedIn ? "Logout" : "Admin"}
+        </button>
       </>
     );
   }

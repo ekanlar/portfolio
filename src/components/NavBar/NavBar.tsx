@@ -88,12 +88,12 @@ function NavBar({
           </button>
         </a>
       </div>
-      <button
+      {/* <button
         className="navbar-login-button"
         onClick={isLoggedIn ? handleLogout : () => setIsPopupOpen(true)}
       >
         {isLoggedIn ? "Logout" : "Login"}
-      </button>
+      </button> */}
       <button
         className="hamburger-menu"
         onClick={() => {
