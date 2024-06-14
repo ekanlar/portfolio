@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./NavBar.css";
-import { auth } from "../../../firebase";
+// import { auth } from "../../../firebase";
 import { Link } from "react-router-dom";
 import homeIcon from "../../assets/logos/homeIcon.png";
 import linkedInLogo from "../../assets/logos/linkedInLogo.png";
@@ -14,20 +14,20 @@ interface NavBarProps {
 }
 
 function NavBar({
-  setIsPopupOpen,
+  // setIsPopupOpen,
   isLoggedIn,
   setIsAddProjectOpen,
 }: NavBarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleLogout = async () => {
-    try {
-      await auth.signOut();
-      console.log("User logged out");
-    } catch (error) {
-      console.error("Logout error", error);
-    }
-  };
+  // const handleLogout = async () => {
+  //   try {
+  //     await auth.signOut();
+  //     console.log("User logged out");
+  //   } catch (error) {
+  //     console.error("Logout error", error);
+  //   }
+  // };
 
   return (
     <div className="navbar-container">
